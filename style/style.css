@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+html, body{
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    max-height: 200%;
+    height: 100%;
+    background: linear-gradient(360deg, #f9ea8f 0%, #aff1da 74%) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+.main{
+    position:relative;
+    top:0;
+    left:0;
+    min-height:100%;
+}
+
+.container{
+   position:absolute;
+   display:flex;
+   flex-direction: row;
+   top:50%; 
+   left:50%;
+   transform: translate(-50%,-50%);
+   min-height:70%;
+   width:55%;
+   background-color: aliceblue;
+   box-shadow: 10px 10px 20px grey;
+}
+
+.left{
+    position:relative;
+    top:0;
+    left:0;
+    width:50%;
+    min-height:100%;
+}
+img{
+    width: 100%;
+    min-height: 100%;  
+}
+
+.right{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top:0;
+    right:0;
+    width:50%;
+    min-height:100%;
+    background-color:#fff;
+}
+
+.block{
+    width:70%;
+    margin:8px auto;
+}
+/*input + label nad inputom*/
+.lable{
+    font-size: 1.2em;
+}
+
+h1{
+    font-size: 1.6em;
+    text-align: center;
+    color:#303030;
+    
+}
+
+input[type=text], input[type=email], input[type=tel] {
+    border:none;
+    border-bottom:solid 2px #747474;
+    width:50%;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    font-size: 1.2em;
+}
+
+input[type=date]{
+    border:solid 2px #747474;
+    font-size: 1.2em;
+    width:50%;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus  {
+    width:70%;
+    border-bottom:solid 2px #303030;
+}
+
+textarea{
+    resize:none;
+    border:solid 2px #747474;
+    width:50%;
+    height:20%;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+textarea:focus{
+    border:solid 2px #303030;
+    width:70%;
+    
+}
+
+
+select{
+    border:solid 2px #747474;
+    padding:0.6em;
+    font-size:1em;
+    width:50%;
+}
+select:focus{
+    border:solid 2px #303030;
+    
+}
+
+input[type=submit]{
+    
+    border:none;
+    border-radius:3em;
+    background-color: rgb(46, 190, 82);
+    padding:1em 2em !important;
+    min-width:20%;
+    margin:-0.2em 30% 0.5em;
+    
+    color:#fff;
+}
+
+@media screen and (max-width: 1780px) {
+    .main{
+        margin:0 auto;
+    }
+    .container{
+        margin:0 auto;
+        position:static;
+        display:flex;
+        flex-direction: row;
+        transform:none;
+        min-height:90%;
+        width:90%;
+        background-color: aliceblue;
+        box-shadow: 10px 10px 20px grey;
+        border:solid 1px rgb(221, 221, 221);
+     }
+     
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container{
+        position: static;
+        margin:10% auto;
+        transform: none;
+        min-height:100%;
+        width:100%;
+        background-color: #fff; 
+     }
+
+    .left{
+        display: none;
+    }
+
+    .right{
+        margin:0 auto;
+        width:70%;
+        min-height:100% !important;
+    }
+    .block{
+        width:90%;
+        margin:10px auto;
+    }
+    h1{
+        font-size: 1.4em;
+    }
+    input[type=text], input[type=email], input[type=tel] {  
+        width:90%;
+    }
+    input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus  {
+        border-bottom:solid 2px #303030;
+        width:100%;
+    }
+
+    input[type=date]{
+        width:90%;
+    }
+    textarea{
+        width:90%;
+    }
+    textarea:focus{
+        width:100%;
+    }
+    select{
+        width:90%;
+    }
+    input[type=submit]{
+        width:50%;
+		margin:0.2em 30% 0.5em;
+    }
+}
+
+
+
